@@ -67,5 +67,7 @@ namespace System.Data {
         public static string Get<T> ( this IDataRecord DataRecord, string Name, string Format, string Default = default ( string ) ) {
             return DataRecord.Get<T, string> ( DataRecord.GetOrdinal ( Name ), x => string.Format ( CultureInfo.CurrentCulture, string.Format ( "{{0:{0}}}", Format ), x ), Default );
         }
+        
     }
+
 }
